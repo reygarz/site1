@@ -1,0 +1,126 @@
+/* Основные стили */
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: 'Scheherazade New', serif;
+    margin: 0;
+}
+
+header {
+    background-color: #222;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo {
+    width: 150px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+/* Стили формы */
+form {
+    display: inline-block;
+    text-align: left;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    margin: auto;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Стили кнопок */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Блок для отображения информации о пользователе */
+.user-info {
+    margin-top: 20px;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 300px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.user-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.user-info p {
+    font-size: 16px;
+}
+
+/* Оформление для мобильной версии */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 100px;
+    }
+}
+
+.main-video {
+    width: 100%;       /* Видео займет всю ширину контейнера */
+    max-width: 500px;  /* Максимальная ширина, чтобы оно не было слишком большим */
+    height: auto;      /* Автоматическая высота для сохранения пропорций */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для красоты */
+    margin: 5px auto; /* Отступы вокруг видео */
+    display: block;    /* Центровка */
+}

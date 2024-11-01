@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RF Company - Аккаунт</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="RF Company Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="programming.html">Программирование</a></li>
+                <li><a href="history.html">История</a></li>
+                <li><a href="notes.html">Заметки</a></li>
+                <li><a href="database.html">База данных</a></li>
+                <li><a href="deadlines.html">Дедлайны</a></li>
+                <li><a href="schedule.html">Расписание</a></li>
+                <li><a href="account.html">Аккаунт</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Аккаунт</h1>
+        
+        <!-- Форма входа -->
+        <form id="login-form">
+            <label for="login-username">Логин:</label>
+            <input type="text" id="login-username" name="login-username" placeholder="Введите логин"><br>
+            <label for="login-password">Пароль:</label>
+            <input type="password" id="login-password" name="login-password" placeholder="Введите пароль"><br>
+            <button type="button" onclick="login()">Войти</button>
+            <button type="button" onclick="continueAsGuest()">Продолжить как гость</button>
+        </form>
+
+        <!-- Форма для редактирования данных пользователя -->
+        <div id="account-info" style="display: none;">
+            <h2>Редактировать профиль</h2>
+            <form id="account-form">
+                <label for="username">Имя:</label>
+                <input type="text" id="username" name="username" placeholder="Введите имя" maxlength="20"><br>
+                <label for="gender">Пол:</label>
+                <input type="text" id="gender" name="gender" placeholder="Введите пол" maxlength="10"><br>
+                <button type="button" onclick="saveAccountInfo()">Сохранить изменения</button>
+                <button type="button" onclick="logout()">Выйти</button>
+            </form>
+            <p id="status"></p>
+
+            <!-- Блок для отображения информации о пользователе -->
+            <div id="user-info" class="user-info">
+                <h2>Ваши данные</h2>
+                <p><strong>Имя:</strong> <span id="display-username">—</span></p>
+                <p><strong>Пол:</strong> <span id="display-gender">—</span></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
